@@ -2,6 +2,7 @@ FROM python:alpine
 MAINTAINER Mike Petersen <mike@odania-it.de>
 
 RUN apk add bash ruby ruby-bundler ruby-full ansible openssh-client openssh-keysign
+RUN pip install awscli
 
 RUN addgroup -g 1000 app \
 	&& adduser -S -u 1000 -g app -s /bin/bash app
